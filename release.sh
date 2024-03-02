@@ -18,8 +18,8 @@ gf build main.go -a amd64 -s linux -p ./temp
 gf docker main.go -p -t xyhelper/chatgpt-share-server:latest
 now=$(date +"%Y%m%d%H%M%S")
 # 以当前时间为版本号
-docker tag xyhelper/chatgpt-share-server:latest xyhelper/chatgpt-share-server:$now
-docker push xyhelper/chatgpt-share-server:$now
+docker tag ruxyhelper/chatgpt-share-server:latest ruxyhelper/chatgpt-share-server:$now
+docker push ruxyhelper/chatgpt-share-server:$now
 echo "release success" $now
 # 写入发布日志 release.log
 echo $now >> ../release.log
